@@ -1,6 +1,6 @@
 # Hari Libur & Hari Penting Lainnya API
 
-API ini berguna untuk menampilkan Hari Libur & Hari Penting dalam kalender indonesia.
+API ini berguna untuk menampilkan Hari Libur & Hari Penting dalam kalender Indonesia.
 
 ## Respon API
 
@@ -24,7 +24,7 @@ API ini berguna untuk menampilkan Hari Libur & Hari Penting dalam kalender indon
 
 ## Sumber Data
 
-Terimakasih untuk [Tanggalan.com](https://tanggalan.com) yang suadh menyediakan data hari libur & hari penting lainnya 🙏
+Terimakasih untuk [Tanggalan.com](https://tanggalan.com) yang sudah menyediakan data hari libur & hari penting lainnya 🙏
 
 ## Terima Kasih
 
