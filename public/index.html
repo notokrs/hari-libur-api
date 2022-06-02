@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css"
+    />
+    <title>Hari Libur & Hari Penting API</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Hari Libur & Hari Penting API</h1>
+      <p>API untuk menampilkan hari libur dan hari penting lainnya</p>
+      <div class="container">
+        <h3>Respon API</h3>
+        <div class="snippet">
+          <pre><code class="language-json">{ 
+	date: "2022-05-02", // yyyy-mm-dd 
+	event: "Hari Raya Idul Fitri 1443 H",
+	is_national_holiday: true 
+}</code></pre>
+        </div>
+      </div>
+      <div class="container">
+        <h3>Endpoint</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Endpoint</th>
+              <th>Fungsi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/api" target="_blank">/api</a></td>
+              <td>
+                Menampilkan keseluruhan hari libur & hari penting ditahun
+                sekarang.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="/api?year=2022" target="_blank">/api?year=2022</a>
+              </td>
+              <td>
+                Menampilkan keseluruhan hari libur & hari penting ditahun 2022.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="/api?month=5&year=2022" target="_blank"
+                  >/api?month=5&year=2022</a
+                >
+              </td>
+              <td>
+                Menampilkan keseluruhan hari libur & hari penting dibulan Mei
+                tahun 2022.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          Request endpoint selain daftar diatas dan tahun yang tidak ada dalam
+          database akan menghasilkan array kosong / [ ].
+        </blockquote>
+      </div>
+      <div class="container">
+        <h3>Sumber Data</h3>
+        <p>
+          Terima kasih untuk
+          <a href="https://tanggalan.com" target="_blank">Tanggalan.com</a> yang
+          sudah menyediakan data hari libur & hari penting lainnya 🙏
+        </p>
+      </div>
+      <div class="container">
+        <h3>Terima Kasih</h3>
+        <p>
+          Terima kasih untuk
+          <a href="https://github.com/satyakresna/" target="_blank"
+            >satyakresna</a
+          >
+          yang telah membuat
+          <a href="https://github.com/satyakresna/api-harilibur" target="_blank"
+            >api-harilibur</a
+          >. API ini terinspirasi berat dari beliau 🙏
+        </p>
+      </div>
+    </main>
+    <footer>
+      2022 - <span id="current-year"></span> &bull;&nbsp;
+      <a href="https://github.com/notokrs" target="_blank">Rusnoto</a
+      >&nbsp;&bull;
+      <a href="https://github.com/notokrs/hari-libur-api" target="_blank"
+        >Github</a
+      >
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-json.min.js"></script>
+  <script>
+    let curYear = new Date();
+    document.getElementById('current-year').innerText = curYear.getFullYear();
+  </script>
+</html>

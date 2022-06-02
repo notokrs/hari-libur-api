@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Space Grotesk', monospace;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #282a36;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+p,
+pre {
+  margin-top: 0.8rem !important;
+}
+a {
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s all;
+}
+a:hover {
+  opacity: 0.5;
+}
+.container {
+  margin: 40px 20px 0;
+}
+.snippet {
+  width: 400px;
+  height: auto;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+pre {
+  font-size: 10pt !important;
+  border-radius: 5px;
+}
+table {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+table,
+th,
+tr,
+td {
+  border: 1px solid;
+  padding: 0.8rem;
+}
+th {
+  text-align: center;
+}
+blockquote {
+  position: relative;
+  margin-top: 1rem;
+  padding: 15px 35px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer {
+  text-align: center;
+  margin: 40px 0 0;
+  padding: 20px 0 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 500px) {
+  .snippet {
+    width: 90vw;
+  }
+}

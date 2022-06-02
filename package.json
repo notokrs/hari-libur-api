@@ -1,0 +1,28 @@
+{
+  "name": "hari-libur-api",
+  "version": "1.0.0",
+  "description": "api hari libur nasional dan hari penting lainnya ",
+  "main": "services/scrapper.js",
+  "scripts": {
+    "start": "ts-node services/scrapper.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "author": "Rusnoto",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jsdom": "^16.2.14",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsdom": "^19.0.0"
+  }
+}
