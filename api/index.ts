@@ -15,7 +15,7 @@ module.exports = async (req: any, res: any) => {
     const parseResult = JSON.parse(json);
     if (month && year) {
       result = parseResult.filter((item: Result) => {
-        if (new Date(item.date).getMonth() + 1 == month) {
+        if (new Date(item.event_date).getMonth() + 1 == month) {
           return item;
         }
       });

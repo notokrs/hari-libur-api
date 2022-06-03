@@ -56,8 +56,8 @@ async function getHariLibur(year: string | number) {
 
             dateRange.forEach((date) => {
               const mResult = {
-                date: date,
-                event: day.children[0].textContent!,
+                event_date: date,
+                event_name: day.children[0].textContent!,
                 is_national_holiday:
                   day.children[0].classList.contains('libur'),
               };
@@ -68,8 +68,8 @@ async function getHariLibur(year: string | number) {
             const dayFilter = day.children[1].textContent!.match(datePattern)!;
             const date = dateFormatter(`${year}-${i}-${dayFilter[0]}`);
             const mResult = {
-              date: date,
-              event: day.children[0].textContent!,
+              event_date: date,
+              event_name: day.children[0].textContent!,
               is_national_holiday: day.children[0].classList.contains('libur'),
             };
 
@@ -83,7 +83,10 @@ async function getHariLibur(year: string | number) {
   }
   const sortedResult = result
     .slice()
-    .sort((a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf());
+    .sort(
+      (a, b) =>
+        new Date(a.event_date).valueOf() - new Date(b.event_date).valueOf()
+    );
 
   const resultFile = path.join(__dirname, '..', 'data', `${year}.json`);
   fs.writeFile(resultFile, JSON.stringify(sortedResult), (error) => {
