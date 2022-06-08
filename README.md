@@ -14,11 +14,11 @@ API ini berguna untuk menampilkan Hari Libur & Hari Penting dalam kalender Indon
 
 ## Endpoint
 
-| Endpoint                           | Fungsi                                                                   |
-| ---------------------------------- | ------------------------------------------------------------------------ |
-| [/api](https://)                   | Menampilkan keseluruhan hari libur & hari penting ditahun sekarang       |
-| [/api?year=2022](https://)         | Menampilkan keseluruhan hari libur & hari penting ditahun 2022           |
-| [/api?month=5?year=2022](https://) | Menampilkan keseluruhan hari libur & hari penting dibulan Mei tahun 2022 |
+| Endpoint                                                                          | Fungsi                                                                   |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [/api](https://hari-libur-api.vercel.app/api)                                     | Menampilkan keseluruhan hari libur & hari penting ditahun sekarang       |
+| [/api?year=2022](https://hari-libur-api.vercel.app/api?year=2022)                 | Menampilkan keseluruhan hari libur & hari penting ditahun 2022           |
+| [/api?month=5?year=2022](https://hari-libur-api.vercel.app/api?month=5&year=2022) | Menampilkan keseluruhan hari libur & hari penting dibulan Mei tahun 2022 |
 
 > Request endpoint selain daftar diatas dan tahun yang tidak ada dalam database akan menghasilkan array kosong / [ ].
 
