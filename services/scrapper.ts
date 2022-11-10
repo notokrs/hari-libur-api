@@ -115,5 +115,5 @@ function dateFormatter(date: string) {
   return [year, month, day].join('-');
 }
 
-const year = new Date().getFullYear();
+const year = new Date().getFullYear() + 1;
 getHariLibur(year);
