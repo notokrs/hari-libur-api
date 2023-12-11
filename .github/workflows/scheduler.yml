@@ -1,0 +1,30 @@
+name: Ambil data dari tanggalan.com
+on: 
+  schedule: 
+  # ambil data setiap tgl 01 Desember
+  - cron: "0 0 1 12 *"
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '>=19.4.0'
+      - name: Install dependecies
+        run: npm ci
+      - name: Ambil data daftar hari libur dari tanggalan.com
+        run: npm run start
+      - name: Commit files
+        run: |
+          git config --local user.email ${{ secrets.MY_EMAIL }}
+          git config --local user.name "Rusnoto Github Actions"
+          git add .
+          git commit -m "chore: update scrape data" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
