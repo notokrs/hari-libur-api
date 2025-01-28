@@ -1,8 +1,8 @@
 name: Ambil data dari tanggalan.com
 on: 
   schedule: 
-  # ambil data setiap tgl 12 Desember
-  - cron: "0 0 12 12 *"
+  # ambil data setiap tgl 31 Desember
+  - cron: "0 0 31 12 *"
   
 jobs:
   build:
