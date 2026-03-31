@@ -22,6 +22,16 @@ API ini berguna untuk menampilkan Hari Libur & Hari Penting dalam kalender Indon
 
 > Request endpoint selain daftar diatas dan tahun yang tidak ada dalam database akan menghasilkan array kosong / [ ].
 
+## Self-Hosting (Express)
+
+Jika Anda ingin menjalankan API ini secara mandiri menggunakan Express:
+
+1.  Salin `.env.example` menjadi `.env` dan sesuaikan port jika perlu.
+2.  Instal dependensi: `npm install`.
+3.  Jalankan server:
+    *   **Development**: `npm run dev`
+    *   **Production**: `npm start`
+
 ## Sumber Data
 
 Terimakasih untuk [Tanggalan.com](https://tanggalan.com) yang sudah menyediakan data hari libur & hari penting lainnya 🙏

@@ -2,7 +2,7 @@ import fsPromise from 'fs/promises';
 import path from 'path';
 import Result from '../utils/interface';
 
-module.exports = async (req: any, res: any) => {
+export default async (req: any, res: any) => {
   try {
     let result;
     const month = req.query.month;
